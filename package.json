@@ -1,0 +1,44 @@
+{
+  "name": "core",
+  "private": true,
+  "main": "dist/src/index.js",
+  "scripts": {
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc",
+    "lint": "npx eslint . --ext .ts --fix",
+    "prestart": "npm run lint && npm run build",
+    "start": "node dist/src/index.js",
+    "pretest": "npm run lint && cd scripts && ./refresh_db.sh",
+    "test": "jest --detectOpenHandles"
+  },
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^9.1.0",
+    "koa-bodyparser": "^4.3.0",
+    "axios": "^0.19.2",
+    "lodash": "^4.17.15",
+    "@hapi/joi": "^17.1.1",
+    "pg": "^8.0.3",
+    "uuid": "^8.3.0",
+    "lru-cache": "^6.0.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7",
+    "eslint": "^6.8.0",
+    "prettier": "^1.19.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "@types/node": "^14.0.27",
+    "@types/koa": "^2.11.3",
+    "@types/koa-router": "^7.4.0",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/lodash": "^4.14.150",
+    "@types/hapi__joi": "^17.1.4",
+    "@types/pg": "^7.14.3",
+    "@types/uuid": "^8.0.1",
+    "@types/lru-cache": "^5.1.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "@typescript-eslint/eslint-plugin": "^2.29.0"
+  }
+}

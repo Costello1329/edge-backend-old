@@ -1,0 +1,8 @@
+node_modules
+dist
+tests
+db
+scripts
+package-lock.json
+README.md
+jest.config.js
