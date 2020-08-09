@@ -21,22 +21,22 @@ query: string? <br>
         "verified": true,
         "premium": false,
         "contact": {
-        "email": "test@mail.ru",
-        "phone": "+7-999-544-12-32",
-        "telegram": "@chebyrash"
+            "email": "test@mail.ru",
+            "phone": "+7-999-544-12-32",
+            "telegram": "@chebyrash"
         },
         "location": {
-        "country": "RUSSIA",
-        "city": "MOSCOW"
+            "country": "RUSSIA",
+            "city": "MOSCOW"
         },
         "salary": {
-        "min": 50000,
-        "max": 75000
+            "min": 50000,
+            "max": 75000
         },
         "scope": "BACKEND",
         "stack": [
-        "Java",
-        "Docker"
+            "Java",
+            "Docker"
         ],
         "remote": true,
         "description": "Lorem ipsum..."
