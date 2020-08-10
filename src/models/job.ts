@@ -7,7 +7,7 @@ export enum JobLevel {
   CTO = "CTO"
 }
 
-export enum JobScope {
+export enum JobSpec {
   Backend = "BACKEND",
   Frontend = "FRONTEND",
   Android = "ANDROID",
@@ -35,19 +35,28 @@ export class JobContact {
   telegram: string;
 }
 
+export class JobCompany {
+  name: string;
+  industry: string;
+  website: string;
+}
+
+export type JobStack = Array<string>;
+
 export class JobModel {
   id: string;
   verified: boolean;
   premium: boolean;
 
   contact: JobContact;
-
   location: JobLocation;
+  company: JobCompany;
   salary: JobSalary;
-  level: JobLevel;
-  scope: JobScope;
 
-  stack: Array<string>;
+  level: JobLevel;
+  spec: JobSpec;
+
+  stack: JobStack;
   remote: boolean;
   description: string;
 }

@@ -15,6 +15,10 @@ export function validate(
 ): (ctx: Context, next: () => Promise<any>) => Promise<any> {
   return async (ctx, next) => {
     let data;
+
+    console.log(ctx.params);
+    console.log(ctx.request.query);
+
     switch (source) {
       case SourceKinds.BODY:
         data = ctx.request.body;
